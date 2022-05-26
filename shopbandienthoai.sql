@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 09, 2022 lúc 02:46 AM
--- Phiên bản máy phục vụ: 10.4.11-MariaDB
--- Phiên bản PHP: 7.4.3
+-- Host: 127.0.0.1
+-- Generation Time: May 26, 2022 at 03:15 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `shopbandienthoai`
+-- Database: `shopbandienthoai`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chitietdonhang`
+-- Table structure for table `chitietdonhang`
 --
 
 CREATE TABLE `chitietdonhang` (
@@ -39,7 +38,7 @@ CREATE TABLE `chitietdonhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `chitietdonhang`
+-- Dumping data for table `chitietdonhang`
 --
 
 INSERT INTO `chitietdonhang` (`idCTHD`, `idHD`, `idSP`, `Soluong`, `Dongia`, `Thanhtien`, `khuyenmai`) VALUES
@@ -60,12 +59,13 @@ INSERT INTO `chitietdonhang` (`idCTHD`, `idHD`, `idSP`, `Soluong`, `Dongia`, `Th
 (15, 24, 35, 1, 10590000, 10590000, 0),
 (16, 25, 12, 1, 12500000, 12500000, 0),
 (17, 26, 43, 1, 990000, 990000, 0),
-(18, 26, 41, 1, 6990000, 6990000, 0);
+(18, 26, 41, 1, 6990000, 6990000, 0),
+(19, 27, 11, 1, 6400000, 6400000, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `donhang`
+-- Table structure for table `donhang`
 --
 
 CREATE TABLE `donhang` (
@@ -82,26 +82,27 @@ CREATE TABLE `donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `donhang`
+-- Dumping data for table `donhang`
 --
 
 INSERT INTO `donhang` (`idHD`, `idUser`, `hoten_user`, `Gmail_user`, `phone`, `Diachi`, `Tongtien`, `payment`, `Ngaytao`, `trangthai`) VALUES
 (16, 5, 'Đức Sinh', 'ducsinh@gmail.com', '0968798351', 'Quận 5 - TP.Hồ chí minh', 990000, 'Tiền mặt', '03-04-2022', 1),
 (17, 5, 'Đức Sinh', 'ducsinh@gmail.com', '0968798351', 'Quận 6 - TP.Hồ chí minh', 23480000, 'Qua thẻ', '03-04-2022', 1),
 (18, 5, 'Đức Sinh', 'ducsinh@gmail.com', '0968798351', 'Quận 8 -  TP.Hồ chí minh', 22990000, 'Tiền mặt', '03-04-2022', 1),
-(19, 6, 'Trang Minh', 'trangminh@gmail.com', '0132849123', 'Cầu Giấy - Hà nội', 12980000, 'Qua thẻ', '03-04-2022', 0),
+(19, 6, 'Trang Minh', 'trangminh@gmail.com', '0132849123', 'Cầu Giấy - Hà nội', 12980000, 'Qua thẻ', '03-04-2022', 1),
 (20, 6, 'Trang Minh', 'trangminh@gmail.com', '0132849123', 'Hà nội', 7430000, 'Tiền mặt', '03-04-2022', 1),
 (21, 5, 'Đức Sinh', 'ducsinh@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh', 15380000, 'Qua thẻ', '03-04-2022', 1),
 (22, 5, 'abcxyz', 'abcxyz@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh', 12390000, 'Qua thẻ', '03-04-2022', 1),
 (23, 7, 'Gia Huy', 'huy@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh', 3990000, 'Tiền mặt', '03-04-2022', 0),
 (24, 7, 'Gia Huy', 'huy@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh', 24580000, 'Tiền mặt', '03-04-2022', 0),
 (25, 8, 'huy nguyen', 'huynguyen@gmail.com', '0123456789', '273 An Dương Vương', 12500000, 'Tiền mặt', '08-04-2022', 1),
-(26, 7, 'Gia Huy', 'huy@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh', 7980000, 'Qua thẻ', '08-04-2022', 1);
+(26, 7, 'Gia Huy', 'huy@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh', 7980000, 'Qua thẻ', '08-04-2022', 1),
+(27, 10, 'trang minh', 'minh@gmail.com', '0123456789', '637/47', 6400000, 'Tiền mặt', '27-04-2022', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lienhe`
+-- Table structure for table `lienhe`
 --
 
 CREATE TABLE `lienhe` (
@@ -115,7 +116,7 @@ CREATE TABLE `lienhe` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaisanpham`
+-- Table structure for table `loaisanpham`
 --
 
 CREATE TABLE `loaisanpham` (
@@ -125,7 +126,7 @@ CREATE TABLE `loaisanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `loaisanpham`
+-- Dumping data for table `loaisanpham`
 --
 
 INSERT INTO `loaisanpham` (`idLSP`, `tenloai`, `maloai`) VALUES
@@ -139,7 +140,7 @@ INSERT INTO `loaisanpham` (`idLSP`, `tenloai`, `maloai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhanvien`
+-- Table structure for table `nhanvien`
 --
 
 CREATE TABLE `nhanvien` (
@@ -157,7 +158,7 @@ CREATE TABLE `nhanvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `nhanvien`
+-- Dumping data for table `nhanvien`
 --
 
 INSERT INTO `nhanvien` (`STT`, `MaNV`, `Ten`, `SDT`, `DiaChi`, `NgaySinh`, `GioiTinh`, `Luong`, `Pass`, `Trangthai`, `PhanQuyen`) VALUES
@@ -169,7 +170,7 @@ INSERT INTO `nhanvien` (`STT`, `MaNV`, `Ten`, `SDT`, `DiaChi`, `NgaySinh`, `Gioi
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -182,7 +183,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`idSP`, `idLSP`, `tensp`, `gia`, `mota`, `hinhanh`) VALUES
@@ -244,7 +245,7 @@ INSERT INTO `sanpham` (`idSP`, `idLSP`, `tensp`, `gia`, `mota`, `hinhanh`) VALUE
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -258,21 +259,22 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`idUser`, `tendangnhap`, `matkhau`, `hoten`, `Gmail`, `SDT`, `Diachi`) VALUES
 (5, 'ducsinh', 'e10adc3949ba59abbe56e057f20f883e', 'ducsinh', 'ducsinh@gmail.com', '0968798351', 'Hồ chí minh'),
-(6, 'trangminh', 'e10adc3949ba59abbe56e057f20f883e', 'trangminh', 'trangminh@gmail.com', '0132849123', 'Hà nội'),
+(6, 'trangminh', '123456', 'trangminh', 'trangminh@gmail.com', '0132849123', 'Hà nội'),
 (7, 'huy', 'e10adc3949ba59abbe56e057f20f883e', 'Gia Huy', 'huy@gmail.com', '0123494123', 'An Dương Vương - Quận 5 - TP.Hồ chí minh'),
-(8, 'huy123', 'e10adc3949ba59abbe56e057f20f883e', 'huy nguyen', 'huynguyen@gmail.com', '0123456789', '273 An Dương Vương');
+(8, 'huy123', 'e10adc3949ba59abbe56e057f20f883e', 'huy nguyen', 'huynguyen@gmail.com', '0123456789', '273 An Dương Vương'),
+(10, 'minh123', 'e10adc3949ba59abbe56e057f20f883e', 'trang minh', 'minh@gmail.com', '0123456789', '637/47');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chitietdonhang`
+-- Indexes for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD PRIMARY KEY (`idCTHD`),
@@ -280,108 +282,108 @@ ALTER TABLE `chitietdonhang`
   ADD KEY `idSP` (`idSP`);
 
 --
--- Chỉ mục cho bảng `donhang`
+-- Indexes for table `donhang`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`idHD`),
   ADD KEY `idUser` (`idUser`);
 
 --
--- Chỉ mục cho bảng `lienhe`
+-- Indexes for table `lienhe`
 --
 ALTER TABLE `lienhe`
   ADD PRIMARY KEY (`idLH`);
 
 --
--- Chỉ mục cho bảng `loaisanpham`
+-- Indexes for table `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   ADD PRIMARY KEY (`idLSP`);
 
 --
--- Chỉ mục cho bảng `nhanvien`
+-- Indexes for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD PRIMARY KEY (`STT`);
 
 --
--- Chỉ mục cho bảng `sanpham`
+-- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`idSP`),
   ADD KEY `idLSP` (`idLSP`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`idUser`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `chitietdonhang`
+-- AUTO_INCREMENT for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `idCTHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idCTHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT cho bảng `donhang`
+-- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `idHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT cho bảng `lienhe`
+-- AUTO_INCREMENT for table `lienhe`
 --
 ALTER TABLE `lienhe`
   MODIFY `idLH` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `loaisanpham`
+-- AUTO_INCREMENT for table `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   MODIFY `idLSP` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `nhanvien`
+-- AUTO_INCREMENT for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
   MODIFY `STT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `sanpham`
+-- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `idSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT cho bảng `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idUser` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chitietdonhang`
+-- Constraints for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD CONSTRAINT `chitietdonhang_ibfk_1` FOREIGN KEY (`idSP`) REFERENCES `sanpham` (`idSP`),
   ADD CONSTRAINT `chitietdonhang_ibfk_2` FOREIGN KEY (`idHD`) REFERENCES `donhang` (`idHD`);
 
 --
--- Các ràng buộc cho bảng `donhang`
+-- Constraints for table `donhang`
 --
 ALTER TABLE `donhang`
   ADD CONSTRAINT `donhang_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `user` (`idUser`);
 
 --
--- Các ràng buộc cho bảng `sanpham`
+-- Constraints for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `sanpham_ibfk_1` FOREIGN KEY (`idLSP`) REFERENCES `loaisanpham` (`idLSP`) ON DELETE NO ACTION ON UPDATE CASCADE;
